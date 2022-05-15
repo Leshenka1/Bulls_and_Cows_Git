@@ -85,7 +85,7 @@ void GameWidget::startGame() {
       strvalue += QString::number(vec[i]) ;
   }
 
-  m_statusMessage.setText(strvalue);
+  //m_statusMessage.setText(strvalue);
 
 
   m_RandNumber = strvalue;
