@@ -144,12 +144,10 @@ void GameWidget::check() {
 
   if (value == m_RandNumber) {
     int score = m_table.rowCount();
-    if (m_highscore->m_scoreTable.rowCount() == 10 && m_highscore->m_scoreTable.item(9,0)->text().toInt() < score
-/*false == m_highscore->isTop(score)*/)  {
+    if (false == m_highscore->isTop(score))  {
       m_statusMessage.setText("Вы выиграли, но не попали в рейтинг!");
-      QMessageBox b;
-      b.setText("pidor");
-      b.exec();
+      QMessageBox::about(this,"Уууупс... :(","Вы выиграли, но не попали в рейтинг!");
+
     }
     else {
       bool bOk;
