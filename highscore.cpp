@@ -54,7 +54,7 @@ void HighScore::refill() {
 
   int i = 0;
   for (auto it = m_highScore.begin(); it != m_highScore.end(); ++it) {
-    if (i > 10)
+    if (i > 9)
       return;
 
     auto size = m_scoreTable.rowCount();
@@ -83,7 +83,7 @@ void HighScore::save() {
 bool HighScore::isTop(int score) {
   int i = 0;
   for (auto it = m_highScore.begin(); it != m_highScore.end(); ++it) {
-    if (i > 10)
+    if (i > 9)
       return false;
     if (it->first > score)
       return true;
