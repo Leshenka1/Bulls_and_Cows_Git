@@ -14,11 +14,11 @@ public:
   void add(int score, QString name);
   bool isTop(int score);
   void refill();
-  QTableWidget m_scoreTable;
 
 private:
   void save();
 private:
+    QTableWidget m_scoreTable;
   QString m_filename;
   std::multimap<int, QString, std::less<int>> m_highScore;
 };
