@@ -155,6 +155,8 @@ void GameWidget::check() {
       if (bOk) {
         // нажато Ok, а не Cancel
         m_highscore->add(score, name);
+                this->stopGame();
+
       }
     }
 
